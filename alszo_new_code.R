@@ -1,6 +1,8 @@
 # header things
 ##################################################
 
+runner = 'Methods. '
+
 # -- playing dice --- #
 
 set.seed(1337)
@@ -15,11 +17,12 @@ library(fuzzyjoin)
 
 # --- source --- #
 
-cel = read_csv('src/celszavak.txt')
-hun = read_tsv('src/hu_list.txt') 
+cel = read_csv('src/celszavak.txt') # target words
+hun = read_tsv('src/hu_list.txt') # hun spelling dict for ref
 
 # --- main functions --- #
 
+# convert a string to hungarian phonemic / disc (one phoneme per character) transcription
 magyar2 = function(string, only_first=F){
   
   string = str_to_lower(string)
@@ -93,6 +96,7 @@ magyar2 = function(string, only_first=F){
   return(string)
 }
 
+# get transcription and char length for words in d
 formatStrings = function(d){
   d = d %>% 
     mutate(
@@ -103,6 +107,7 @@ formatStrings = function(d){
   return(d)
 }
 
+# target words are cvcv (4 char) / cvcvc (5 char): cross them with hun spelling list and get number of neighbours where neighbour <- levenshtein dist of pair == 1
 getNeighbours = function(d,my_length){
   
   if (my_length == 4){
@@ -131,6 +136,7 @@ getNeighbours = function(d,my_length){
   return(d)
 }
 
+# generate sample of nonce words for the cvcv / bvcv / cvbv / cvcvc / bvcvc / cvbvc / cvcvb template
 makeNonce = function(my_syl_struc){
   
   vowels = c('a','á','e','é','i','í','o','ó','ö','ő','u','ú','ü','ű')
@@ -209,6 +215,7 @@ makeNonce = function(my_syl_struc){
 return(d)
 }
 
+# get number of neighbours from hun list for cvcv / cvcvc nonce words. also generate some nonce words with 0 neighbours. match nonce words to target words in terms of count of neighbours.
 matchVanilla = function(d){
   
   my_length = d$syl_struc %>% 
@@ -248,6 +255,7 @@ matchVanilla = function(d){
   return(d3)
 }
 
+# make a wide table in which col1: target words, col 2: # neighbours of target, cols 3-4-5: matched nonce words w/ fault tolerance (of 0, of 1, of 2). fault tolerance of 1 means nonce has +/- 1 neighbours as compared to matched target word.
 tidyVanilla = function(d){
   
   d2 = d %>% 
@@ -298,6 +306,7 @@ tidyVanilla = function(d){
   return(d2)
 }
 
+# count neighbours for one nonce word. sensitive to format of input df, see code below.
 getNeighboursForOne = function(d){
   
   my_length = d$syl_struc %>% 
@@ -321,6 +330,7 @@ getNeighboursForOne = function(d){
   return(n_neighbours)
 }
 
+# draw a quartet of nonce words where words are cvcv x2, bvcv, cvbv. words should be at an edit distance of at least 3 from each other. words should not repeat across quartets. output is wide table of quartets.
 drawPairs4 = function(d){
   
   n4 = filter(d, nchar(syl_struc) == 4)
@@ -413,6 +423,7 @@ drawPairs4 = function(d){
   return(foils4)
 }
 
+# draw a sextet of nonce words where words are cvcvc x2, bvcvc, cvbvc, cvcvb. words should be at an edit distance of at least 3 from each other. words should not repeat across sextets. output is wide table of sextets.
 drawPairs5 = function(d){
   
   n5 = filter(d, nchar(syl_struc) == 5)
@@ -598,7 +609,7 @@ nonce_list = nonce_list %>%
     nonce_disc = target_disc
   )
 
-# --- generator: building quadruplets (task 2) --- #
+# --- generator: building "pairs" (quartets / sextets) (task 2) --- #
 
 nonce_list = nonce_list %>%
   filter(n_neighbours == 0)
