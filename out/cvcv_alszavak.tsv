@@ -1,0 +1,21 @@
+target word	syllable structure	number of neighbours	as many neighbours as target	+/- 1 neighbours	+/- 2 neighbours
+bábu	cvcv	3	füpe, mocsű, dedű, kavu, szűná, nicsa, raszá, kerí, nóre, tódzsa	járű, pűrű, gédzse, kösű, mimő, százö, lotyo, szófő, níri, küca	ludí, zotü, szőrí, fójé, katö, düli, rászé, csokü, csóví, jénű
+batyu	cvcv	3	kolő, hódí, lőva, zséda, fűzu, nejo, szítö, vará, zahó, natü	fetó, dejő, csőra, nödő, csíkú, rácá, vepa, szuje, jéti, dohö	jafi, váhú, vűho, tyita, pirö, hűkó, dzésa, kuszí, csetyű, lűpe
+bili	cvcv	13	lécsi, pera, nélü, gara, kecsi, rusa	rócsa, panyi, hanyó, háni, moló, kólü, csóki	nyóri, nyénü, vási, ráda, szűni, cári, koro, szima
+csoki	cvcv	9	délő, fapi, lavi, hudi, zselő, pazsi, méja, vepe	mikó, rinó, páza, jászó, lása, fóra, zádi, kóvi, méma	danya, ganü, kószi, szima, henyi, szanó, csoha, zici, gegü
+cumi	cvcv	4	szikú, dzsuszi, fúnyó, lóvő, ragű, csévé, dőgi, nyelú, vicé, níri	ronyó, csígi, zehe, hámo, vasá, cotó, kíja, láte, gadzsi, szátyú	dejű, köcé, meca, tega, jőszi, lótyi, nyáko, gőpi, cocu, lőjő
+deka	cvcv	3	csócsó, szítö, tyúza, cokó, kavu, vasá, medó, fődzsi, zefe, nyőző	neru, dánye, nyőgő, sáto, nyinü, csizo, gűne, mucsu, naga, kótyó	szípő, tyodza, nyoső, lasí, rüré, pójo, víla, fajé, mécsü, zizé
+duda	cvcv	12	rasi, moló, róda, kéró, háni, szuda, kólü, csóki, lese	pera, nyóri, fulü, lécsi, koro, szűni, ráda, rusa, turó	sélü, fajó, kuca, zsura, mázó, mégü, panya, váki
+fésű	cvcv	0	dikü, zúdo, conyo, lácá, fácú, csogá, jecü, csüvá, gepö, junyű	hijá, hílű, zőhá, dzsútü, lőfé, pedí, génö, nyőgé, fasí, cumu	jőszi, tűdi, nyőgő, vinő, sápu, szűzű, düki, memű, csőcse, hácsö
+gyufa	cvcv	2	meca, vöra, nodó, fűnyi, heszű, veno, szuje, cipí, vüve, högó	seto, lasí, szöpe, csöró, guje, húhi, műké, csűvő, tólö, sűsza	hálo, síki, domo, dikü, hajü, jutű, live, szűrö, kífe, gólé
+karó	cvcv	22	kora	ránü	vánü, hali
+kenu	cvcv	5	lenye, sisza, szegó, zsécse, föja, vezi, nécse, toga, dola, colá	kötű, szóke, décsí, lezső, dávi, dutyó, pipu, lice, kánu, szófő	kéna, medű, fova, csögő, száhi, tyica, dedű, sípő, révo, csoke
+mázsa	cvcv	8	reci, panó, pidzsi, fete, hacsó, kóvi, páfa, gónü	dólü, kőri, róha, zere, csoló, fapi, csási, moma, zselő, dzsapi	teze, dédzsi, ráné, dejű, dzsini, szőge, déne, ketye, zsuna, máro
+móló	cvcv	6	kiső, gíva, góló, lapő, cuha, löci, nelé, gesze, zsényi	cuja, dádzsa, szedző, ronü, kíni, taza, lesze, sapó, rétya, csavó	lamu, szóke, votó, szűsi, pacá, téfi, ronyi, hálu, parü, mije
+pala	cvcv	16	szeli, lapi, gári	csánü, száni, csika, vali	futa, rócsa, csálü, sélü, nyere, mégü, fajó, végü
+pipa	cvcv	15	vali, száni	mégü, váki, csáji, sélü, gári, szeli, futa, nyere, fajó	lécsi, rusa, kecsi, nélü, gara, pera, turó
+roló	cvcv	7	szűnü, merű, déla, fova, kíni, dzsapi, cura, fúle, csoha	cséha, kopá, móla, mevő, ketye, lási, léni, máro, lezső, dejű	keca, csavó, csukö, móga, héjó, lavi, tare, düli, dora, gálé
+saru	cvcv	9	pázó, húgü, cali, róha, lavi, délő, zere, hudi, moma	zsura, fóra, reci, kóvi, mikó, mevő, panya, vétye	szoró, danya, kószi, puvi, tére, mezső, meré, szanó, nyénü, domó
+tócsa	cvcv	5	jaja, székű, tare, rakí, modzsó, dzsopó, nége, kóhi, gúzsa, móga	húli, kiső, níri, hetü, jűne, vanya, paná, tőné, ragű, dömi	natü, szanó, fova, soku, tyúza, csúzé, főri, zámo, pömi, szűnü
+zakó	cvcv	7	csigi, pate, lidzsa, ronü, csoló, kéna, henyi, rídi, déla	száju, lezső, rümi, pidzsi, gesze, nyada, renye, kadzsó, dédzsi	székű, jeki, vezi, fújo, gálé, ronyó, lesű, taza
+zselé	cvcv	6	renye, vöki, féne, cséha, góva, gíró, teze, löci, zsényi	szanó, kíni, nemo, fúju, tonya, toga, pipá, tíni, kunó, szedző	páza, parü, cseszű, húli, garé, páfa, raszu, hetü, nűki

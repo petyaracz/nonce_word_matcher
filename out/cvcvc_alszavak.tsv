@@ -1,0 +1,41 @@
+target word	syllable structure	number of neighbours	as many neighbours as target	+/- 1 neighbours	+/- 2 neighbours
+bélyeg	cvcvc	1	vajof, dőlút, tétir, csedős, ruzsisz, tojőz, kázoz, fejűn, hojós	zsugad, jonyít, szadaf, dukan, pícáp, sudzsör, hevíz, ládan, zsőgöv, lácup	káran, dódul, tozsik, szécsén, térid, somok, tomoz
+beton	cvcvc	4	kapom, kóler, gakad, tájul, vízis, meszéj, pofok, vécsez	héven, ködet, dódul, csisáz, duzsaj, dásos, semer, pápat, lesís	sikeg, hidősz, pütyög, csérél, majacs, tyecset, pazád, némas, múláz, mazut
+cölöp	cvcvc	0	nyígúzs, dzonyűty, cotyidzs, cizóp, csámép, lácup, víducs, sógüny, mocör, szícáv	csuság, rasok, sílóz, natín, nepány, hesüs, lunul, mocsidzs, tücsík, zétyény	fúváp, tötyök, szerév, nyihál, pidár, zsugad, lütás, növir, gihar, jonyít
+cserép	cvcvc	2	sálüsz, zsodony, vajet, laval, fölór, zsugad, kóper, fólet, pányűk	tikóc, kadész, mocsidzs, mityes, lovúk, szőzsén, készát, nucát, puszip, mönyény	pícáp, tájul, kóler, nyűzsúv, szerév, hekeg, lótyőr, ritiz, dzucsudzs, tyűjűr
+dívány	cvcvc	2	lógós, sálüsz, csakoz, kizéd, csájul, keríny, kévédzs, hidősz, növir, hajod	lovúk, legév, szocsid, dacsuk, sópaj, tücsík, száracs, szacsűr, nyüdzsed	dzonyűty, cedőf, nyütisz, vutyon, cizóp, csújőf, dzacop, náhot, szópűr, csalet
+fátyol	cvcvc	0	szúvücs, vodzücs, dzucsudzs, jőtyész, zipúh, dzsűzén, nyűzsúv, dzonyűty, dúpan, dzázász	szacsűr, főler, vösök, jagod, pekit, mésat, pihadzs, nyászit, nafág, kadész	zutén, leheh, tuzser, szánász, vühet, ládan, gükos, rapij, rikasz, latyul
+fotel	cvcvc	2	szolud, lipir, sikeg, szánász, fötyeg, keríny, mifor, tavizs, kélél	fejük, rőcáz, cöszöl, pulop, jagáz, makűk, havís, hosen, motec, luhizs	szópűr, jőtyész, dzsűzén, hodzéz, zipúh, hasic, zócöh, moham, zsőgöv, cőláv
+gödör	cvcvc	4	tájul, kóler, moham, vécek, kőzeg, meszéj, dívod, csakács	cuhaj, csisáz, héven, száracs, fejük, kacéj, tozsik, regós, magüsz	sálüsz, csájul, sípel, gürős, szőnény, padzsír, hevíz, fülosz
+horog	cvcvc	7	datol, fopat, dagol	véreg, katál, csegez, kapon, metét	téhes, ködet, lelezs
+jászol	cvcvc	3	héven, kacéj, kurics, csikak, sipáz, puszip, csisáz, tozsik	lidor, fúváp, tolec, jákój, leheh, kőzeg, máras, szecsil, fölór	zékút, remőg, cátyás, zsínat, delűj, szünej, gűjük, szóvum, csedős, hunyóv
+kabát	cvcvc	1	natín, hükész, kovür, tyokan, nyeher, repér, vajof, gűjük, nyőgény	csájul, sógüny, leheh, dzojúc, szecsil, digóm, fúváp, szerév, majacs	fejük, letül, káran, regul, dásos, szőnes, rólat, szécsén, tomoz, puszip
+kalács	cvcvc	9		szakál, máros, csegez, véreg	dagol, fopat, ködön, datol
+kazán	cvcvc	4	vízis, kóler, csakács, hekeg, tájul, kőzeg, vécsez, köjet	dódul, kurics, csukós, száracs, tozsik, téhes, pápat, káran, regul	tágíl, gehed, növir, leheh, keríny, jákój, lógós, tavizs, megög, vühet
+kehely	cvcvc	3	rehed, semer, regul, káran, kacéj, dódul, rólat, lönyök, dásos	vécsez, gürős, cémej, máras, jákój, tyecset, fötyeg, szuvós	méjúh, tunyóz, vőges, zsutos, zétyény, pekit, nyőgény, patét, hönyag, zizony
+kémény	cvcvc	2	lógós, vágóf, pagel, lipir, kóper, hidősz, hevíz, vajet, szerév, csérél	zsikav, patét, hívány, tófőj, hönyag, mőtej, ruzsisz, héven, jacal, fogósz	sógüny, tyűjűr, mödzsacs, hiszaty, vityőn, vécek, cizóp, cotyidzs, szópűr, sázsád
+kenőcs	cvcvc	1	lepút, gerőr, jüvöm, nojog, fidos, cipéty, készát, zikőr, zozson, hosen	fezsács, lógós, dzonyűty, mödzsacs, pünyal, laval, cémej, gükos, fisik, mocsiny	rehed, letül, tomoz, rólat, regul, duzsaj, magüsz, csalet, vilün
+lepel	cvcvc	5	téhes, ködet, lelezs	gakad, szőnény, metét, köjet, vízis, kóler, kapon, kapom, pofok	regul, szécsén, cuhaj, tozsik, csukós, kacéj, dzsityeg, ködön
+lepény	cvcvc	6	kapon, szőnény, katál, metét	dagol, lelezs, datol, ködet, fopat, ködön	hasic, csakács, kőzeg, csegez, kapom, vécek, moham, kóler
+lézer	cvcvc	1	tészesz, linuf, fővédzs, csöröny, sópaj, cöszöl, heniny, tyálic, mocsidzs, mölét	cizóp, leheh, tyadzén, sikeg, ritiz, vágóf, zékút, lótyőr, túvűv, dívod	száracs, rólat, magüsz, regós, kacéj, tozsik, tomoz, dódul, regul, szécsén
+mecset	cvcvc	5	ködet, téhes, lelezs	dívod, kőzeg, katál, metét, kóler, kapon, köjet, vécek	puszip, rehed, dódul, héven, szécsén, kurics, regós, sipáz
+méreg	cvcvc	8	véreg, csegez	ködön, datol, fopat, dagol	kapon, katál, szakál, szőnény, máros
+nyereg	cvcvc	5	téhes, lelezs, ködet	metét, hekeg, gakad, szőnény, köjet, meszéj, pofok, hasic, katál, dívod	rehed, lesís, száracs, regul, vilün, dagol, magüsz, rólat, héven
+pamut	cvcvc	4	hekeg, köjet, vízis, csakács, kapom, vécsez, kóler, moham	sipáz, térid, semer, kacéj, cuhaj, ködet, tozsik, lelezs, rólat	szolud, gihar, nyihál, hajod, letod, kizéd, zsugad, csájul, rapij, dadzsál
+panel	cvcvc	1	cipéty, hónid, delűj, mohik, tapőr, rütüty, szocsid, ponóty, szómék, híjodzs	tötyök, nyihál, zsugad, jósot, nyűhad, rapij, pányűk, gükos, növir, kanah	szécsén, somok, cuhaj, tomoz, csikak, magüsz, duzsaj, csalet, kacéj
+parázs	cvcvc	7	fopat, datol, dagol	véreg, csegez, metét, szőnény, katál	lelezs, téhes, ködet
+pedál	cvcvc	1	pőpoz, vüdor, repér, fonesz, pálóm, dogücs, szünej, jolasz, nőmád	fúváp, mocör, rúvóp, fötyeg, pazád, zűdzsízs, jákój, csérél, lújak	vilün, csipedzs, fejük, csukós, magüsz, száracs, héven, rehed, lesís
+peron	cvcvc	0	fúsáf, tyadzén, vutyon, csúcíny, dzojúc, nyűzsúv, vityőn, kedzsúsz, cedőf	tirisz, türég, szómék, colós, hosen, jagod, retót, porél, tihacs, súper	mejecs, lógós, fúváp, vászáj, híszik, dadzsál, jákój, málüzs
+póráz	cvcvc	1	hönyag, szocsid, zékút, mecsut, gűjük, zsínat, tatun, heniny, szimós, ponóty	zékút, dzázász, tyadzén, csalet, ritiz, majacs, födzij, kévédzs, nyütisz, vászáj	cuhaj, vilün, csisáz, puszip, regul, kurics, rólat, csalet, hívány, tozsik
+sisak	cvcvc	1	csesős, fűsöl, kijöv, hosen, műhuj, mosany, nucát, szünej, vüdor	fölór, jákój, kanah, növir, gürős, náhot, vodzücs, pagel, szánász, szuvós	szécsén, kurics, somok, rólat, regul, rehed, tozsik, száracs, lönyök
+szalag	cvcvc	7	dagol, fopat, ködön, datol	kapon, katál, metét, véreg	ködet, lelezs, téhes
+szekér	cvcvc	2	remézs, lidor, megir, tolec, laval, tavizs, dukan, kélél	vájíg, kovür, moruh, ganyázs, dőlút, készát, ríküt, nurak, karür, csukós	zipúh, zsirösz, rúvóp, csújőf, dzűszűdz, kőkás, födzij, pícáp, dzázász, csérél
+szelep	cvcvc	9		csegez, szakál, véreg, máros	ködön, dagol, fopat, datol
+szirup	cvcvc	0	ritiz, gészedz, csérél, vityőn, hodzéz, kélöt, vodzücs, mödzsacs, zujíl, zséfáh	dőlút, tyálic, cátyás, gerőr, nyávas, mityes, ritiz, porél, zsövid, fidos	laval, rapij, csakoz, szuvós, hajod, tolec, lidor, konász, leheh, sikeg
+tubus	cvcvc	0	kedzsúsz, gészedz, csalet, csúcíny, szerév, zsőgöv, nyűhad, focsázs, dzűszűdz, pícáp	tyálic, heniny, hedül, zágűr, gerőr, cöszöl, doman, möcém, jazal, retót	vágóf, letod, póric, gihar, múláz, tágíl, kóper, fisik, növir
+vágány	cvcvc	3	cuhaj, csikak, regós, vilün, dódul, pápat, csipedzs, letül, szécsén	vízis, póric, köjet, hasic, zutén, pagel, kapom, gihar, csérél, tolec	sópaj, rifők, szocsid, kílás, lésez, zsitik, sütyör, szőzsén, vajof, kúzet
+vászon	cvcvc	2	tötyök, majacs, fülosz, szadaf, fúváp, dadzsál, kóper, löszet, pütyög	lésez, lívez, pehéc, csecél, tirisz, gümőm, nédül, rityad, járezs, nyüdzsed	pofok, nyígúzs, zujíl, hodzéz, fúsáf, födzij, vityőn, dívod, zócöh, meszéj
+vödör	cvcvc	2	jonyít, megir, ládan, szadaf, kélél, guszáj, dadzsál, zsodony, tyecset	dúles, nojog, tunűsz, nucát, tóseg, rőcáz, háril, csosec, jitusz, nédül	cizóp, nyütisz, hekeg, mámud, kuszuk, szúvücs, kóler, hidősz, gészedz, vízis
+zseton	cvcvc	2	lógós, keríny, laval, remézs, pütyög, csájul, padzsír, majacs, letod, vágóf	csöröny, mocsidzs, fidos, zsutos, colav, repér, tyálic, nyimig, kílás, losod	tyűjűr, szúvücs, sudzsör, hekeg, cöhún, lúcűj, szerév, dzúrüty, kóler
+zsilip	cvcvc	0	náhot, dzsízsőny, mámud, cotyidzs, ritiz, fezsács, cutad, fűsöl, jitől, zócöh	porecs, tutös, tófőj, nyüdzsed, doman, cőgös, tojőz, tyálic, rílik, tunűsz	cégéf, hijóp, fölór, szuvós, digóm, gihar, mifor, zutén, vászáj, laval
+zsinór	cvcvc	0	zipúh, cutad, hiszaty, ritiz, cotyidzs, kólöny, duzuk, dzacop, jenodzs, cőláv	jacal, kílás, rílik, nurak, karür, pátyér, zizony, sehöny, zsogar, kovür	kötőd, jákój, remézs, tavizs, kóper, gehed, megir, pidár, lipir
