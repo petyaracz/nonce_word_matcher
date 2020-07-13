@@ -1,8 +1,6 @@
 # header things
 ##################################################
 
-runner = 'Methods. '
-
 # -- playing dice --- #
 
 set.seed(1337)
@@ -14,6 +12,7 @@ setwd('~/Work/BME/alszavak_2/alszo_new/')
 library(tidyverse)
 library(stringdist)
 library(fuzzyjoin)
+library(glue)
 
 # --- source --- #
 
@@ -388,7 +387,7 @@ drawPairs4 = function(d){
       
       flag6 = !(cvcv1 %in% cvcv1s | cvcv1 %in% cvcv2s | cvcv2 %in% cvcv1s | cvcv2 %in% cvcv2s | bvcv %in% bvcvs | cvbv %in% cvbvs)
       
-      big_flag = flag1 & flag2 & flag3 & flag4 & flag5 & flag6
+      big_flag = ( flag1 & flag2 & flag3 & flag4 & flag5 & flag6 ) | i > 1000
       i = i + 1
     }
     
@@ -501,7 +500,7 @@ drawPairs5 = function(d){
       
       flag6 = !(cvcvc1 %in% cvcvc1s | cvcvc1 %in% cvcvc2s | cvcvc1 %in% cvcvc3s | cvcvc2 %in% cvcvc1s | cvcvc2 %in% cvcvc2s | cvcvc2 %in% cvcvc3s | cvcvc3 %in% cvcvc1s | cvcvc3 %in% cvcvc2s | cvcvc3 %in% cvcvc3s | bvcvc %in% bvcvcs | cvbvc %in% cvbvcs | cvcvb %in% cvcvbs)
       
-      big_flag = flag1 & flag1.5 & flag1.75 & flag2 & flag3 & flag4 & flag4.5 & flag5 & flag5.5 & flag5.75 & flag6
+      big_flag = ( flag1 & flag1.5 & flag1.75 & flag2 & flag3 & flag4 & flag4.5 & flag5 & flag5.5 & flag5.75 & flag6 ) | i > 1000
       i = i + 1
     }
     
@@ -611,14 +610,31 @@ nonce_list = nonce_list %>%
 
 # --- generator: building "pairs" (quartets / sextets) (task 2) --- #
 
-nonce_list = nonce_list %>%
-  filter(n_neighbours == 0)
+nonce_list_n_neighbours = nonce_list %>%
+  filter(n_neighbours %in% 0:5)
 
-pairs4 = nonce_list %>% 
-  drawPairs4()
+nonce_list_n_neighbours_nested = nonce_list_n_neighbours %>% 
+  group_by(n_neighbours) %>% 
+  nest()
 
-pairs5 = nonce_list %>% 
-  drawPairs5()
+nonce_list_n_neighbours_nested = nonce_list_n_neighbours_nested %>% 
+  mutate(
+    pairs4 = map(data, drawPairs4)
+  )
+
+pairs4 = nonce_list_n_neighbours_nested %>% 
+  select(n_neighbours, pairs4) %>% 
+  unnest(cols = c(pairs4))
+
+nonce_list_n_neighbours_nested2 = nonce_list_n_neighbours_nested %>% 
+  filter(n_neighbours < 4) %>% 
+  mutate(
+    pairs5 = map(data, drawPairs5)
+  )
+
+pairs5 = nonce_list_n_neighbours_nested2 %>% 
+  select(n_neighbours, pairs5) %>% 
+  unnest(cols = c(pairs5))
 
 ##################################################
 # printing
