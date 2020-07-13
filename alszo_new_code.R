@@ -330,16 +330,15 @@ getNeighboursForOne = function(d){
 }
 
 # draw a quartet of nonce words where words are cvcv x2, bvcv, cvbv. words should be at an edit distance of at least 3 from each other. words should not repeat across quartets. output is wide table of quartets.
-drawPairs4 = function(d){
+drawPairs4 = function(d, my_min_dist, setsize){
   
   n4 = filter(d, nchar(syl_struc) == 4)
-  my_min_dist = 3
   cvcv1s = as.list(NULL)
   cvcv2s = as.list(NULL)
   bvcvs = as.list(NULL)
   cvbvs = as.list(NULL)
   
-  for (ii in 1:20){
+  for (ii in 1:setsize){
     
     print(glue('row number: {ii}/10'))  
     
@@ -387,7 +386,7 @@ drawPairs4 = function(d){
       
       flag6 = !(cvcv1 %in% cvcv1s | cvcv1 %in% cvcv2s | cvcv2 %in% cvcv1s | cvcv2 %in% cvcv2s | bvcv %in% bvcvs | cvbv %in% cvbvs)
       
-      big_flag = ( flag1 & flag2 & flag3 & flag4 & flag5 & flag6 ) | i > 1000
+      big_flag = ( flag1 & flag2 & flag3 & flag4 & flag5 & flag6 ) 
       i = i + 1
     }
     
@@ -398,7 +397,7 @@ drawPairs4 = function(d){
   }
   
   foils4 = tibble(
-    pair_id = 1:20,
+    pair_id = 1:setsize,
     nonword1 = unlist(cvcv1s),
     nonword2 = unlist(cvcv2s),
     nonwordb1 = unlist(bvcvs),
@@ -423,10 +422,9 @@ drawPairs4 = function(d){
 }
 
 # draw a sextet of nonce words where words are cvcvc x2, bvcvc, cvbvc, cvcvb. words should be at an edit distance of at least 3 from each other. words should not repeat across sextets. output is wide table of sextets.
-drawPairs5 = function(d){
+drawPairs5 = function(d, my_min_dist, setsize){
   
   n5 = filter(d, nchar(syl_struc) == 5)
-  my_min_dist = 3
   cvcvc1s = as.list(NULL)
   cvcvc2s = as.list(NULL)
   cvcvc3s = as.list(NULL)
@@ -434,7 +432,7 @@ drawPairs5 = function(d){
   cvbvcs = as.list(NULL)
   cvcvbs = as.list(NULL)
   
-  for (ii in 1:20){
+  for (ii in 1:setsize){
     
     print(glue('row number: {ii}/10'))  
     
@@ -500,7 +498,7 @@ drawPairs5 = function(d){
       
       flag6 = !(cvcvc1 %in% cvcvc1s | cvcvc1 %in% cvcvc2s | cvcvc1 %in% cvcvc3s | cvcvc2 %in% cvcvc1s | cvcvc2 %in% cvcvc2s | cvcvc2 %in% cvcvc3s | cvcvc3 %in% cvcvc1s | cvcvc3 %in% cvcvc2s | cvcvc3 %in% cvcvc3s | bvcvc %in% bvcvcs | cvbvc %in% cvbvcs | cvcvb %in% cvcvbs)
       
-      big_flag = ( flag1 & flag1.5 & flag1.75 & flag2 & flag3 & flag4 & flag4.5 & flag5 & flag5.5 & flag5.75 & flag6 ) | i > 1000
+      big_flag = ( flag1 & flag1.5 & flag1.75 & flag2 & flag3 & flag4 & flag4.5 & flag5 & flag5.5 & flag5.75 & flag6 )
       i = i + 1
     }
     
@@ -513,7 +511,7 @@ drawPairs5 = function(d){
   }
   
   foils5 = tibble(
-    pair_id = 1:20,
+    pair_id = 1:setsize,
     nonword1 = unlist(cvcvc1s),
     nonword2 = unlist(cvcvc2s),
     nonword3 = unlist(cvcvc3s),
@@ -619,7 +617,7 @@ nonce_list_n_neighbours_nested = nonce_list_n_neighbours %>%
 
 nonce_list_n_neighbours_nested = nonce_list_n_neighbours_nested %>% 
   mutate(
-    pairs4 = map(data, drawPairs4)
+    pairs4 = map(data, drawPairs4(my_min_dist = 3, setsize = 20))
   )
 
 pairs4 = nonce_list_n_neighbours_nested %>% 
@@ -627,13 +625,13 @@ pairs4 = nonce_list_n_neighbours_nested %>%
   unnest(cols = c(pairs4))
 
 nonce_list_n_neighbours_nested2 = nonce_list_n_neighbours_nested %>% 
-  filter(n_neighbours < 4) %>% 
+  filter(n_neighbours < 5) %>% 
   mutate(
     pairs5 = map(data, drawPairs5)
   )
 
 pairs5 = nonce_list_n_neighbours_nested2 %>% 
-  select(n_neighbours, pairs5) %>% 
+  select(n_neighbours, pairs5(my_min_dist = 3, setsize = 20)) %>% 
   unnest(cols = c(pairs5))
 
 ##################################################
