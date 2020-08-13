@@ -16,7 +16,7 @@ library(glue)
 
 # --- source --- #
 
-cel = read_csv('src/celszavak.txt') # target words
+cel = read_csv('src/celszavak2.txt') # target words
 hun = read_tsv('src/hu_list.txt') # hun spelling dict for ref
 
 # --- main functions --- #
@@ -573,6 +573,14 @@ nonce_sets = map(
   syl_strucs, ~ makeNonce(.)
 )
 
+# --- dropping verby endings --- #
+
+nonce_sets = map(
+  nonce_sets, ~ filter(.,
+    str_detect(target_word, "(ul|ül|ol|ál|ez)$", negate = T)
+    )
+  )
+
 # --- building nonce word lists for cvcv/cvcvc targets, matched for number of neighbours, with +/-2 fault tolerance (task 1) --- #
 
 vanilla_cvcv = matchVanilla(nonce_sets[[1]])
@@ -617,7 +625,7 @@ nonce_list_n_neighbours_nested = nonce_list_n_neighbours %>%
 
 nonce_list_n_neighbours_nested = nonce_list_n_neighbours_nested %>% 
   mutate(
-    pairs4 = map(data, drawPairs4(my_min_dist = 3, setsize = 20))
+    pairs4 = map(data, ~ drawPairs4(., my_min_dist = 3, setsize = 20))
   )
 
 pairs4 = nonce_list_n_neighbours_nested %>% 
@@ -625,13 +633,13 @@ pairs4 = nonce_list_n_neighbours_nested %>%
   unnest(cols = c(pairs4))
 
 nonce_list_n_neighbours_nested2 = nonce_list_n_neighbours_nested %>% 
-  filter(n_neighbours < 5) %>% 
+  filter(n_neighbours < 3) %>% 
   mutate(
-    pairs5 = map(data, drawPairs5)
-  )
+    pairs5 = map(data, ~ drawPairs5(., my_min_dist = 3, setsize = 20))
+  ) # these values were determined by futzing a lot
 
 pairs5 = nonce_list_n_neighbours_nested2 %>% 
-  select(n_neighbours, pairs5(my_min_dist = 3, setsize = 20)) %>% 
+  select(n_neighbours, pairs5) %>% 
   unnest(cols = c(pairs5))
 
 ##################################################
@@ -645,3 +653,6 @@ write_tsv(nonce_list, 'out/alszavak_szomszedokkal.tsv')
 
 write_tsv(pairs4, 'out/alszavak_negyesek_cvcv.tsv')
 write_tsv(pairs5, 'out/alszavak_negyesek_cvcvc.tsv')
+
+
+system('gc "revamped iteration see Lilla email"')
